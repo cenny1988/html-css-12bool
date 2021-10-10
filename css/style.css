@@ -5,8 +5,25 @@
 }
 
 [class*="col-"]{
-    min-height: 100px;
-    background-color: blue;
+    min-height: 40px;
+    background-color: rgb(67, 67, 247);
     border: 1px solid #fff;
 }
+
+.row>.col-xs:not(:first-child){
+    flex-grow: 2;
+}
+
+[class*="col-"]>.row>[class*="col-"]{
+    min-height: 20px;
+    background-color: rgb(49, 247, 125);
+    border: none;
+    margin-right: 2px;
+}
+
+[class^="col-"]>.row { 
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
 
